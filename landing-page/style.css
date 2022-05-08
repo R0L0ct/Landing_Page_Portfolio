@@ -9,9 +9,12 @@
 
 body {
 	display:flex;
-	justify-content:center;
+	flex-direction: column;
+	align-items: center;
 	padding-top:20px;
-	background-color:#F5F5F5
+	background-color:#F5F5F5;
+	width: 100vw;
+	height: 150vh;
 }
 
 header {
@@ -19,7 +22,7 @@ header {
 	display:flex;
 	justify-content:space-between;
 	align-items:center;
-	min-height:110px;
+	max-height:110px;
 	width:1725px;
 	border:1px solid rgba(0, 0, 0, 0.1);
 }
@@ -37,19 +40,94 @@ nav {
 	font-weight:600;
 }
 
-.liContainer li {
-	cursor:pointer;
+.liContainer li a {
+	text-decoration: none;	
+	color:black;
 }
 
-.imgContainer {
+.liContainer li a:hover {
+	color: #6c63ff;
+}
+
+.imgLogo {
 	display:flex;
 	align-items:center;
 }
 
-.imgContainer img{
+.imgLogo img{
 	height:100px;
 	margin-left:30px
 }
+main {
+	display: flex;
+	width: 1725px;
+	background-color: #FFFFFF;
+	height: auto;
+	flex-direction: column; 
+	align-items: center;
+}
+.section1 {
+	width: 1725px;
+	background-color: #FFFFFF;
+	height: 876px;
+	border:1px solid rgba(0, 0, 0, 0.1);
+	display: flex;
+	justify-content: space-between;
+}
+.section2 {
+	width: 1725px;
+	background-color: #FFFFFF;
+	height: 350px;
+	border:1px solid rgba(0, 0, 0, 0.1);
+	display: flex;
+	justify-content: center;		
+	align-items: center;
+	padding: 0 300px;
+}
+.section2 p {
+	text-align: center;
+}
+.slogan {
+	width: 50%;
+	display: flex;
+	flex-direction: column;	
+	justify-content: center;
+	gap: 30px;
+	padding: 0 90px;
+}
+.sloganButton {
+	display: flex;
+	gap: 25px;
+	width: 50%;
+}
+.sloganButton button {
+	width: 50%;
+	border-radius: 30px;
+	border-style: none;
+	border: 3px solid rgb(0, 0, 0);
+	background-color: white;
+	padding: 5px;
+	font-weight: 600; 
+	font-size: 15px;
+	background-color: #6c63ff;
+	color: #fafafa;
+}
+.sloganButton button:hover {
+	background-color: aliceblue;
+	color:black;
+	cursor: pointer;
+}
+.imgContainer {
+	width: 50%;
+	display: flex;
+	align-items: center;
+}
+
+.imgContainer img {
+	width: 100%;
+	height: auto;
+}
+
 
 @media (max-width:783px){
 	header {
