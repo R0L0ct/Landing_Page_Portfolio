@@ -6,15 +6,17 @@
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
 }
+
 html {
   scroll-behavior: smooth;
 }
+
 body {
   display: flex;
   flex-direction: column;
   align-items: center;
   background: rgb(228, 228, 232);
-  width: 100vw;
+  width: 100%;
   height: 150vh;
 }
 
@@ -45,12 +47,14 @@ nav {
   width: 100%;
   font-weight: 600;
 }
+
 .liContainer li {
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
 .liContainer li a {
   text-decoration: none;
   color: black;
@@ -81,7 +85,6 @@ main {
 }
 
 .section1 {
-  width: 100%;
   background-color: transparent;
   min-height: 876px;
   border: 1px solid rgba(0, 0, 0, 0.1);
@@ -89,15 +92,15 @@ main {
 }
 
 .section2 {
-  width: 100%;
   background-color: #fafafa;
   min-height: 500px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 300px;
+  padding: 20px 0;
 }
+
 .section {
   position: relative;
 }
@@ -110,19 +113,22 @@ main {
   background-color: red;
   opacity: 0;
 }
+
 .section2 p {
   text-align: center;
+  width: 50%;
 }
 
 .section3 {
-  width: 100%;
-  min-height: 500px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   color: #fafafa;
+  gap: 30px;
+  padding: 30px 50px;
 }
+
 .benefit {
   display: flex;
   flex-direction: column;
@@ -131,10 +137,14 @@ main {
   padding: 0 30px;
   gap: 20px;
   width: 33.3%;
+  flex-wrap: wrap;
+  flex: 1 1 300px;
 }
+
 .benefit i {
   font-size: 50px;
 }
+
 .benefit h3 {
   font-weight: 700;
   color: YellowGreen;
@@ -142,16 +152,19 @@ main {
 
 .benefit p {
   text-align: center;
+  font-size: 17px;
 }
+
 .divContainer {
-  width: 100%;
-  height: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   padding-bottom: 30px;
   padding: 0 20px;
+  flex-wrap: wrap;
+  gap: 30px;
 }
+
 .title1 {
   width: 100%;
   height: 50%;
@@ -161,14 +174,141 @@ main {
   align-items: center;
   gap: 30px;
 }
+
 .section4 {
+  height: auto;
   width: 100%;
-  min-height: 500px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: #fafafa;
+  padding: 50px;
+  gap: 30px;
+}
+
+.clientes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  gap: 50px;
+  padding: 50px;
+  color: #fafafa;
+}
+
+.clientesCards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+.contactUs {
+  background-color: #fafafa;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 50px;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.imgContacto {
+  width: 55%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contactUs img {
+  width: 100%;
+  min-width: 200px;
+}
+.contactBox {
+  width: 40%;
+  padding: 50px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.contacto {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.contacto__1 {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.contacto__1 span {
+  font-weight: 600;
+  padding: 20px 0;
+}
+.contacto__1 p {
+  display: flex;
+  gap: 20px;
+  font-size: 17px;
+}
+.contacto__2 {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.contacto__2 span {
+  font-weight: 600;
+  padding: 20px 0;
+}
+.contacto__2 p {
+  display: flex;
+  gap: 20px;
+  font-size: 17px;
+}
+
+.redes {
+  display: flex;
+  gap: 30px;
+}
+.redes i {
+  font-size: 20px;
+  color: rgb(59, 91, 152);
+}
+.redes a {
+  text-decoration: none;
+}
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: coral;
+  width: 100%;
+  padding: 20px 0;
+}
+footer img {
+  width: 50px;
+}
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1 1 200px;
+  background-color: gray;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.card i {
+  color: white;
+  font-size: 50px;
+}
+
+.card:hover {
+  background-color: Coral;
+  cursor: pointer;
 }
 .steps {
   display: flex;
@@ -177,19 +317,28 @@ main {
   justify-content: center;
   padding: 0 30px;
   gap: 30px;
+  flex-wrap: wrap;
 }
+
 .steps i {
   font-size: 50px;
 }
+
+.steps p {
+  max-width: 200px;
+  font-size: 18px;
+}
+
 .divContainer2 {
-  height: 50%;
-  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   padding-bottom: 30px;
   padding: 0 20px;
+  flex-wrap: wrap;
+  gap: 30px;
 }
+
 .title2 {
   height: 50%;
   width: 100%;
@@ -199,6 +348,7 @@ main {
   justify-content: center;
   gap: 30px;
 }
+
 .slogan {
   width: 50%;
   display: flex;
@@ -213,13 +363,16 @@ main {
   font-size: 18px;
   line-height: 30px;
 }
+
 .slogan span {
   color: #e1ff00;
 }
+
 .buttonContainer {
   display: flex;
   gap: 25px;
   width: 50%;
+  flex-wrap: wrap;
 }
 
 .button {
@@ -234,9 +387,9 @@ main {
 }
 
 .button:hover {
-  background-color: purple;
-  border: 1px solid purple;
-  color: black;
+  background-color: #fafafa;
+  border-color: #fafafa;
+  color: Black;
 }
 
 .firstButton {
@@ -244,9 +397,15 @@ main {
   color: #000;
 }
 
+.secondButton {
+  color: #e1ff00;
+  border-color: #e1ff00;
+}
+
 .secondButton:hover {
   background-color: transparent;
-  color: purple;
+  border-color: #fafafa;
+  color: #fafafa;
 }
 
 .imgContainer {
@@ -254,7 +413,8 @@ main {
   display: flex;
   align-items: center;
   background-color: transparent;
-  padding: 90px;
+  padding: 45px;
+  flex-wrap: wrap;
 }
 
 .imgContainer img {
@@ -263,22 +423,27 @@ main {
   height: auto;
   border-radius: 10px;
 }
+
 input {
   display: none;
 }
+
 .menuHamburguesa label {
   display: none;
 }
+
 @media screen and (max-width: 600px) {
   .section1 {
     flex-direction: column;
     justify-content: center;
     padding-top: 20px;
   }
+
   .menuHamburguesa label {
     display: flex;
     cursor: pointer;
   }
+
   .menuHamburguesa {
     display: flex;
     justify-content: center;
@@ -288,6 +453,7 @@ input {
     font-size: 30px;
     padding-right: 30px;
   }
+
   .liContainer li {
     width: 100%;
     display: flex;
@@ -295,6 +461,7 @@ input {
     align-items: center;
     padding: 20px;
   }
+
   .liContainer {
     opacity: 0;
     pointer-events: none;
@@ -317,6 +484,7 @@ input {
     pointer-events: all;
     opacity: 1;
   }
+
   .liContainer li a {
     color: white;
   }
