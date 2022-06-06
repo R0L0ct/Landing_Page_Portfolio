@@ -33,8 +33,9 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 50%;
   height: 100%;
+  overflow: hidden;
+  padding-right: 20px;
 }
 
 .liContainer {
@@ -198,7 +199,7 @@ main {
   color: #fafafa;
 }
 
-.clientesCards {
+.cardsContainer {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -206,12 +207,13 @@ main {
   gap: 50px;
   flex-wrap: wrap;
 }
+
 .contactUs {
   background-color: #fafafa;
   width: 100%;
   display: flex;
   justify-content: space-between;
-  padding: 50px;
+  padding: 0 0 0 50px;
   gap: 50px;
   flex-wrap: wrap;
 }
@@ -222,15 +224,18 @@ main {
   justify-content: center;
   align-items: center;
 }
+
 .contactUs img {
   width: 100%;
   min-width: 200px;
 }
+
 .contactBox {
   width: 40%;
   padding: 50px 0;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 50px;
 }
 
@@ -273,43 +278,98 @@ main {
   display: flex;
   gap: 30px;
 }
+
 .redes i {
   font-size: 20px;
   color: rgb(59, 91, 152);
 }
+
 .redes a {
   text-decoration: none;
 }
+
 footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: coral;
   width: 100%;
   padding: 20px 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
+
 footer img {
   width: 50px;
 }
-.card {
+
+.cards {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex: 1 1 200px;
-  background-color: gray;
-  border-radius: 20px;
-  padding: 20px;
+  /* flex: 1 1 200px; */
+  position: relative;
+  width: 300px;
+  height: 350px;
 }
 
-.card i {
+.cards .face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.cards .front {
+  transform: perspective(600px) rotateY(0deg);
+  box-shadow: 0 5px 10px #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cards .back {
+  transform: perspective(600px) rotateY(180deg);
+  background: rgb(45, 45, 45);
+  box-shadow: 0 5px 10px #000;
+  padding: 15px;
+  color: #fafafa;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.cards i {
   color: white;
   font-size: 50px;
 }
 
-.card:hover {
-  background-color: Coral;
-  cursor: pointer;
+.cards .back a {
+  text-decoration: none;
+  color: #fafafa;
+  font-weight: 600;
 }
+
+.cards .back .link {
+  border-top: 1px solid white;
+  height: 50px;
+  line-height: 50px;
+}
+
+.cards:hover .front {
+  transform: perspective(600px) rotateY(180deg);
+}
+
+.cards:hover .back {
+  transform: perspective(600px) rotateY(360deg);
+}
+
+.cards .back a:hover {
+  color: #e1ff00;
+}
+
 .steps {
   display: flex;
   flex-direction: column;
@@ -317,7 +377,7 @@ footer img {
   justify-content: center;
   padding: 0 30px;
   gap: 30px;
-  flex-wrap: wrap;
+  flex: 1 1 200px;
 }
 
 .steps i {
@@ -325,7 +385,7 @@ footer img {
 }
 
 .steps p {
-  max-width: 200px;
+  max-width: 500px;
   font-size: 18px;
 }
 
